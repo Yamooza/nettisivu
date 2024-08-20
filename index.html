@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yrityksen nettisivu</title>
+</head>
+<body>
+<div id="main_alue"></div>
+<button id="paasivu-btn">Pääsivu</button>
+<button id="yritysesittely-btn">yritysesittely</button>
+<button id="yhteystiedot-btn">Yhteystiedot</button>
+<button id="henkilokunta-btn">Henkilökunta</button>
+
+<script>
+    const paasivuSisalto = `
+    <h1>Pääsivu</h1>
+    <p>Tervetuloa yrityksen sivulle!</p>
+    <p>Yrityksen toiminta-alueet ovat ohjelmistokehitys ja it-tuki<p>
+    `;
+    const yritysesittelySisalto = `
+  <h1>Yritysesittely</h1>
+  <p>Yritys on erikoistunut ohjelmistokehitykseen ja IT-konsultointiin.</p>
+  <p>Yrityksen toiminta-alueet ovat ohjelmistokehitys, IT-konsultointi ja IT-tuki.</p>
+`;
+
+const yhteystiedotSisalto = `
+  <h1>Yhteystiedot</h1>
+  <p>Osoite: Yrityksen osoite</p>
+  <p>Puhelin: 040 1234567</p>
+  <p>Sähköposti: [info@yritys.fi](mailto:info@yritys.fi)</p>
+`;
+
+const henkilokuntaSisalto = `
+  <h1>Henkilökunta</h1>
+  <ul>
+    <li>
+      <h2>Mikko Mikkola</h2>
+      <p>Toimitusjohtaja</p>
+      <p>Puhelin: 040 1234567</p>
+      <p>Sähköposti: [Mikko.mikkola@yritys.fi]</p>
+    </li>
+    <li>
+      <h2>Jaana Jaanala</h2>
+      <p>Ohjelmistokehittäjä</p>
+      <p>Puhelin: 040 7654321</p>
+      <p>Sähköposti: [jaana.jaanala@yritys.fi]</p>
+    </li>
+    <li>
+      <h2>Kalle Kallela</h2>
+      <p>IT-konsultti</p>
+      <p>Puhelin: 040 9012345</p>
+      <p>Sähköposti: [kalle.kallela@yritys.fi]</p>
+    </li>
+  </ul>
+`;
+
+// Määritellään painikkeiden toiminta
+document.getElementById('paasivu-btn').addEventListener('click', () => {
+  document.getElementById('main_alue').innerHTML = paasivuSisalto;
+});
+
+document.getElementById('yritysesittely-btn').addEventListener('click', () => {
+  document.getElementById('main_alue').innerHTML = yritysesittelySisalto;
+});
+
+document.getElementById('yhteystiedot-btn').addEventListener('click', () => {
+  document.getElementById('main_alue').innerHTML = yhteystiedotSisalto;
+});
+
+document.getElementById('henkilokunta-btn').addEventListener('click', () => {
+  document.getElementById('main_alue').innerHTML = henkilokuntaSisalto;
+});
+</script>
+</body>
+</html>
