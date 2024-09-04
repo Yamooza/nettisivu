@@ -3,6 +3,12 @@ const path = require('path')
 const express = require('express')
 const app = express()
 
+
+const recommenders =require('./recommenders.json')
+
+app.get('/api/recommenders' , (req, res) => {
+    res.json(recommenders)
+})
 //-------------------------------------------------------
 // Tehdään polkumääritys front kansioon 
 const polku = path.join(__dirname, './front')
